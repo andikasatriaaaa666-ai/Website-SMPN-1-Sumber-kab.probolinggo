@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body * {
   scroll-behavior: smooth;
   font-family: "poppins", serif;
 }
@@ -13,17 +15,9 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  z-index: -2;
 }
 
-/* sekolah */
-.container-sekolah {
-  background-image: url(404.png);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 .container-sekolah h1 {
   font-size: 20px;
 }
@@ -43,7 +37,6 @@ nav {
   align-items: center;
   height: 70px;
   color: #eef5f2ff;
-  overflow-x: hidden;
   flex-wrap: wrap;
 }
 
@@ -66,6 +59,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #fdfefe;
+  text-decoration: underline;
 }
 
 /* hamburger menu */
@@ -103,8 +97,9 @@ nav ul li a:hover {
 }
 
 .menu-toggle input:checked ~ span:nth-child(2) {
-  transform: rotate(45deg)
-  translate(2px, -2px);
+  transform:
+    rotate(45deg)
+    translate(2px, -2px);
   background-color: white;
 }
 .menu-toggle input:checked ~ span:nth-child(3) {
@@ -116,7 +111,7 @@ nav ul li a:hover {
   background-color: white;
 }
 
-/* respomsive break point */
+/* responsive break point */
 
 /* ukuran talet */
 @media screen and (max-width: 768px) {
@@ -130,6 +125,9 @@ nav ul li a:hover {
   .menu-toggle {
     display: flex;
   }
+  nav {
+    position: relative;
+  }
   nav ul {
     position: absolute;
     right: 0;
@@ -138,13 +136,13 @@ nav ul li a:hover {
     width: 50%;
     background-color: #00a596;
     flex-direction: column;
-    z-index: -1;
+    z-index: 0;
     justify-content: space-evenly;
     align-items: center;
-    transform: translateX(100%);
+    opacity: 0;
     transition: all 1s;
   }
   nav ul.slide {
-    transform: translateX(0);
+    opacity: 1;
   }
-}
+    }
