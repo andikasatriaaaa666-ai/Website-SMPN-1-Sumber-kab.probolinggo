@@ -129,9 +129,11 @@ nav ul li a:hover {
     justify-content: space-evenly;
     align-items: center;
     transition: display 0.15s;
+    opacity: 0;
     display: none;
   }
   nav ul.slide {
     display: flex;
+    opacity: 1;
   }
     }
