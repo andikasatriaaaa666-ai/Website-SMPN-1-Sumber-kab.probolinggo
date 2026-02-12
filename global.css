@@ -128,7 +128,7 @@ nav ul li a:hover {
     z-index: 0;
     justify-content: space-evenly;
     align-items: center;
-    transition: all 1s;
+    transition: display 0.15s;
     display: none;
   }
   nav ul.slide {
